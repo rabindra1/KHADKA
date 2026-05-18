@@ -36,6 +36,12 @@ nav a{
   border-radius:8px;
   display:inline-block;
   font-weight:bold;
+  transition:0.3s;
+}
+
+nav a:hover{
+  background:white;
+  color:#0f2027;
 }
 
 .card{
@@ -43,6 +49,11 @@ nav a{
   padding:30px;
   border-radius:15px;
   margin-top:20px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
 }
 
 .card h2{
@@ -54,10 +65,92 @@ nav a{
   line-height:1.6;
 }
 
+/* Profile Image */
+
 .profile{
-  width:160px;
-  height:160px;
+  width:220px;
+  height:220px;
   object-fit:cover;
   border-radius:50%;
-  margin-bottom:20px;
+  border:5px solid #27c7ff;
+  box-shadow:0 0 25px rgba(39,199,255,0.5);
+}
+
+/* About Page */
+
+.about-card{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:40px;
+  text-align:left;
+}
+
+.about-info{
+  max-width:600px;
+}
+
+.about-info h2{
+  color:#27c7ff;
+  margin-bottom:15px;
+  font-size:38px;
+}
+
+.about-info p{
+  margin-bottom:14px;
+  font-size:20px;
+  line-height:1.7;
+}
+
+.about-info strong{
+  color:#27c7ff;
+}
+
+/* Contact Page */
+
+.contact-card{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  text-align:center;
+}
+
+.contact-box{
+  background:rgba(255,255,255,0.12);
+  padding:30px 20px;
+  border-radius:18px;
+  transition:0.3s;
+}
+
+.contact-box:hover{
+  transform:translateY(-8px);
+  background:rgba(39,199,255,0.25);
+}
+
+.contact-box h2{
+  color:#27c7ff;
+  margin-bottom:15px;
+}
+
+.contact-box p{
+  font-size:18px;
+}
+
+/* Responsive */
+
+@media(max-width:800px){
+
+  .about-card{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .about-info{
+    max-width:100%;
+  }
+
+  .contact-card{
+    grid-template-columns:1fr;
+  }
+
 }
